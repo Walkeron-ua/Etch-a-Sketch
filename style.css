@@ -1,6 +1,7 @@
 body { 
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 0;
 }
 .container { 
@@ -9,8 +10,8 @@ body {
     width: 960px;
     border: 1px solid black;
 }
-.container div { 
-    width: 60px;
-    height: 60px;
-}
 
+.container div { 
+    border: 1px solid lightgray;
+    box-sizing: border-box;
+}
