@@ -18,9 +18,16 @@ function createSquares(gridSize) {
         const newSquare = document.createElement("div");
         newSquare.style.width = `${960 / gridSize}px`
         newSquare.style.height = `${960 / gridSize}px`
-        newSquare.addEventListener("mouseenter", () => newSquare.style.backgroundColor = "black");
+        newSquare.addEventListener("mouseenter", () => randomColor(newSquare));
         container.appendChild(newSquare);
     }
+}
+
+function randomNumber() {
+    return Math.floor(Math.random() * 255) + 1;
+}
+function randomColor(newSquare) { 
+    return newSquare.style.backgroundColor = `rgb(${randomNumber()},${randomNumber()},${randomNumber()})`;
 }
 
 createSquares(gridSize);
